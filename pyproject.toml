@@ -1,0 +1,23 @@
+[project]
+name = "bankagent"
+version = "0.1.0"
+description = "银行对公客户研究与产品匹配：任务、证据、审核与增量知识治理"
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.8,<4"]
+parsers = ["docling==2.143.0", "pdfplumber==0.11.10"]
+
+[project.scripts]
+bankagent = "bankagent.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["bankagent*"]
+
+[tool.setuptools.package-data]
+bankagent = ["parser_models.json"]
