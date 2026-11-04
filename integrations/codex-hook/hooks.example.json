@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*send_message_to_thread$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /ABSOLUTE/PATH/BankAgent/integrations/codex-hook/route_hook.py",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

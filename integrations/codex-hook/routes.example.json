@@ -1,0 +1,25 @@
+{
+  "roles": {
+    "CONTROLLER_CHAT_ID": "controller",
+    "AUTHOR_CHAT_ID": "author",
+    "REVIEWER_CHAT_ID": "reviewer",
+    "MARKET_CHAT_ID": "market"
+  },
+  "routes": {
+    "CONTROLLER_CHAT_ID": [
+      "AUTHOR_CHAT_ID",
+      "REVIEWER_CHAT_ID",
+      "MARKET_CHAT_ID"
+    ],
+    "AUTHOR_CHAT_ID": [
+      "REVIEWER_CHAT_ID"
+    ],
+    "REVIEWER_CHAT_ID": [
+      "AUTHOR_CHAT_ID",
+      "CONTROLLER_CHAT_ID"
+    ],
+    "MARKET_CHAT_ID": [
+      "CONTROLLER_CHAT_ID"
+    ]
+  }
+}
